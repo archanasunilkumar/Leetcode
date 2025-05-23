@@ -1,14 +1,12 @@
 class Solution {
     public int findFinalValue(int[] nums, int original) {
-        int i=0;
-     while(i<nums.length)
+      for(int i=0;i<nums.length;i++)
       {
         if(nums[i]==original)
         {
             original*=2;
-            i=0;
+            i=-1;
         }
-        else i++;
       }  
       return original;
     }
