@@ -1,6 +1,6 @@
 class Solution {
     public int maximumPopulation(int[][] logs) {
-    int population[]=new int[101];
+    int p[]=new int[101];
     int len=logs.length;
     for(int i=0;i<len;i++)
     {
@@ -8,16 +8,16 @@ class Solution {
         int death=logs[i][1];
         for(int j=birth;j<death;j++)
         {
-            population[j-1950]++;
+            p[j-1950]++;
         }
     }
     int max=1950;
     int maxpop=0;
-    for(int i=0;i<population.length;i++)
+    for(int i=0;i<p.length;i++)
     {
-        if(population[i]>maxpop)
+        if(p[i]>maxpop)
         {
-            maxpop=population[i];
+            maxpop=p[i];
             max=1950+i;
         }
     }
